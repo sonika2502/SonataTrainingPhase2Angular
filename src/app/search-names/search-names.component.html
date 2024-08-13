@@ -1,1 +1,13 @@
 <p>search-names works!</p>
+<div>
+  <h2>Search List</h2>
+  <input type="text" [(ngModel)]="searchTerm" placeholder="Search">
+  <ul *ngIf="searchTerm">
+    <li *ngFor="let item of list">
+      <p *ngIf="item.toLowerCase()===searchTerm.toLowerCase()">
+        {{ item }}
+      </p>
+    </li>
+  </ul>
+  <p *ngIf="!searchTerm">Enter an element to see result</p>
+</div>

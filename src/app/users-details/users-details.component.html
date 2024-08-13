@@ -1,0 +1,14 @@
+<p>users-details works!</p>
+<div>
+Users search: <input type="text" [(ngModel)]="searchName" placeholder="Search">
+<ul *ngIf="searchName" style="list-style: none;">
+    <li *ngFor="let name of data">
+        <p *ngIf="name.userName.toLowerCase() === searchName.toLowerCase()">
+            User's Name:{{name.userName}}<br/>
+            User's ID:{{name.userId}}<br/>
+            User's Company:{{name.userCompany}}<br/>
+            User's Salary:{{name.userSal}}<br/>            
+        </p>
+    </li>
+</ul>
+</div>

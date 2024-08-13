@@ -1,0 +1,14 @@
+<p>product-details works!</p>
+<h1>Products under 100 rs</h1>
+<div>
+    <ul style="list-style: none;">
+        <li *ngFor="let product of data">
+            <p *ngIf="product.productPrice < 100">
+                Product Id: {{ product.productId }}<br/>
+                Product Name: {{ product.productName }} <br/>
+                Product Price:  ₹{{ product.productPrice }}<br/>
+                Product Desc: {{ product.productDesc }}
+            </p>
+        </li>
+    </ul>
+</div>

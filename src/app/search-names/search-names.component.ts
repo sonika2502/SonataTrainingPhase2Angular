@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./search-names.component.css']
 })
 export class SearchNamesComponent {
-
+  searchTerm: string = '';
+  list: string[] = ['Shailaja', 'Jayashree', 'Mary', 'Ganesh', 'Roja', 'Sheela'];
 }
